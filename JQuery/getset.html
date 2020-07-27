@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/Jquery/JQuery321.min.js"></script>
+</head>
+
+<body>
+    <button id="getHtml">Get Html</button>
+    <button id="getText">Get Text</button>
+    <button id="getValue">Get Value</button>
+    <hr>
+    <button id="setHtml">Set Html</button>
+    <button id="setText">Set Text</button>
+    <button id="setValue">Set Value</button>
+    <hr>
+
+
+
+    <select name="" id="cities">
+        <option value="05">amasya</option>
+        <option value="06">ankara</option>
+        <option value="34">İstanbul</option>
+        <option value="35">İzmir</option>
+        <option value="42">Konya</option>
+    </select>
+    <button id="sec">Seç</button>
+    <hr>
+    <input type="radio" name="cinsiyet" value="Kadın"><span>Kadın</span>
+    <input type="radio" name="cinsiyet" value="Erkek"><span>Erkek</span>
+    <button id="cinsiyetSecici">Cinsiyet Seç</button>
+    <p>
+        <b id="paraf">Lorem, ipsum.</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae sunt labore,
+        quasi ab
+        dicta quidem id amet voluptatibus doloremque perferendis expedita, sed animi quis, saepe odit deserunt
+        laudantium tempore veniam!
+    </p>
+    <input type="text" value="">
+    <hr>
+    <input type="checkbox" name="musictype" value="rock"><span>Rock</span>
+    <input type="checkbox" name="musictype" value="Jazz"><span>Jazz</span>
+    <input type="checkbox" name="musictype" value="Slow"><span>Slow</span>
+    <input type="checkbox" name="musictype" value="Arabesk"><span>Arebesk</span>
+
+    <button id="muzik">Müzik Türü Seç</button>
+    <script>
+
+        $("#muzik").click(function () {
+            //     var MuzikListesi = $("input[name='musictype']:checked");
+            //     for (var i = 0; i < MuzikListesi.length; i++) {
+            //         var val = $(MuzikListesi[i]).val();
+            //         console.log(val);
+            //     }
+            $("input[name='musictype']:checked").each(function (i, Element) {
+                console.log($(Element).val());
+            });
+        });
+
+        $("#cinsiyetSecici").click(function () {
+            var val = $("input[name='cinsiyet']:checked").val();
+            console.log(val);
+        })
+
+        $("#sec").click(function () {//Paragraf içerisindeki html kodlarını tamamen okumamızı sağlamaktadır.
+            var value = $("#cities").val();
+            console.log(value);
+        });
+
+
+
+        $("#getHtml").click(function () {//Paragraf içerisindeki html kodlarını tamamen okumamızı sağlamaktadır.
+            var value = $("p").html();
+            console.log(value);
+        });
+        $("#getText").click(function () {//Paragraf içerisini okumamızı sağlamaktadır.
+            var value = $("p").text();
+            console.log(value);
+        });
+        $("#getValue").click(function () {//textbox içerisindeki değerleri okumamızı sağlamaktadır.
+            var value = $("input[type='text']").val();
+            console.log(value);
+        });
+        $("#setHtml").click(function () {//Paragraf içerisindeki html kodlarını tamamen yazmamızı okumamızı sağlamaktadır.
+            var value = $("p").html("<b>ÜMMÜHAN ÖKSÜZ</b>");
+            console.log(value);
+        });
+        $("#setText").click(function () {//Paragraf içerisini yazmamızı sağlamaktadır.
+            var value = $("p").text("ÜMMÜHAN ÖKSÜZ");
+            console.log(value);
+        });
+        $("#setValue").click(function () {//textbox içerisindeki değerleri yazmamızı sağlamaktadır.
+            var value = $("input[type='text']").val("ÜMMÜHAN ÖKSÜZ");
+            console.log(value);
+        });
+    </script>
+
+</body>
+
+</html>

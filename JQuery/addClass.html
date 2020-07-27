@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class</title>
+    <script src="libs/Jquery/JQuery321.min.js"></script>
+    <style>
+        .green {
+            color: green;
+            font-size: 25px;
+        }
+
+        .red {
+            color: red;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .orange {
+            color: orange;
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="greenClass">Yeşil Görünüm Ekle</button>
+    <button id="redClass">Kırmızı Görünüm Ekle</button>
+    <button id="orangeClass">Turuncu Görünüm Ekle</button>
+    <hr>
+    <button id="greenClassSil">Yeşil Görünüm Sil</button>
+    <button id="redClassSil">Kırmızı Görünüm Sil</button>
+    <button id="orangeClassSil">Turuncu Görünüm Sil</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aperiam veritatis officiis ullam unde tempora,
+        architecto libero facilis recusandae quis placeat assumenda at quibusdam dolores sed obcaecati labore, laborum
+        ex!</p>
+
+    <script>
+        $("#greenClass").click(function () {
+            $("p").addClass("green");
+        });
+        $("#redClass").click(function () {
+            $("p").addClass("red");
+        });
+        $("#orangeClass").click(function () {
+            $("p").addClass("orange");
+        });
+        $("#greenClassSil").click(function () {
+            $("p").removeClass("green");
+        });
+        $("#redClassSil").click(function () {
+            $("p").removeClass("red");
+        });
+        $("#orangeClassSil").click(function () {
+            $("p").removeClass("orange");
+        });
+    </script>
+
+</body>
+
+</html>

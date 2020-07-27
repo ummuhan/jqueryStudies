@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Remove</title>
+    <script src="libs/Jquery/JQuery321.min.js"></script>
+
+</head>
+
+<body>
+    <input type="text" name="todoText" id="todoText">
+    <button id="basaEkle">Başa Ekle</button>
+    <button id="sonaEkle">Sona Ekle</button>
+    <h4>Yapılacaklar Listesi</h4>
+    <ul id="liste">
+
+    </ul>
+</body>
+<script>
+    $("#basaEkle").click(function () {
+        var li = $("<li></li>");
+        li.text($("#todoText").val());
+        $("#liste").prepend();//Başa eleman eklemiş oluruz.
+    });
+    $("#sonaEkle").click(function () {
+        var li = $("<li></li>");
+        li.text($("#todoText").val());
+        $("#liste").append();//Sona eklemyi sağlamaktadır.
+        //  $("#todoTexxt").clearQueue();
+    });
+</script>
+
+</html>

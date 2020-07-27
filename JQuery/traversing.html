@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+    <script src="libs/Jquery/JQuery321.min.js"></script>
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .underline {
+            text-decoration: underline;
+
+        }
+
+        .color {
+
+            color: red;
+        }
+
+        .bg {
+            background-color: royalblue;
+        }
+
+        .list-item {
+            border: orange 2px dashed;
+            padding: 5px;
+            margin: 3px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            width: 200px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button id="btn">Reset</button>
+    <ul id="options">
+        <li>İtalic Ayarı</li>
+        <li>Bold Ayarı</li>
+        <li>Underline Ayarı</li>
+        <li>Color Ayarı</li>
+        <li>Background Ayarı</li>
+    </ul>
+    <script>
+        var ulChildren = $("#options").children();//Elementin çocuklarını yakaladık.
+
+        ulChildren.each(function (i, e) {//yakaladığımız ocuları dönerek onlara class ekledik.
+            $(e).addClass("list-item");
+        });
+
+        $("#options li").eq(0).click(function () {
+            $(this).toggleClass("italic");
+        });
+        $("#options li").eq(1).click(function () {
+            $(this).toggleClass("bold");
+        });
+        $("#options li").eq(2).click(function () {
+            $(this).toggleClass("underline");
+        });
+        $("#options li").eq(3).click(function () {
+            $(this).toggleClass("color");
+        });
+        $("#options li").eq(4).click(function () {
+            $(this).toggleClass("bg");
+        });
+
+
+
+    </script>
+</body>
+
+</html>

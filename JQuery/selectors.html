@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <script src="libs/Jquery/JQuery321.min.js"></script>
+</head>
+
+<body>
+    <p id="p1">p1-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, unde dolores. Eum ea eveniet repellat
+        accusamus recusandae inventore quia rem est expedita quibusdam quas, qui corporis odit nostrum non sit?</p>
+    <p class="p2">p2-Hic ullam blanditiis ea, qui deserunt, saepe corporis distinctio assumenda voluptas nisi aperiam
+        ipsum
+        in. Cupiditate sed blanditiis cumque, exercitationem tenetur asperiores provident nam, est quas ut animi quae!
+        Corporis.</p>
+    <p class="p2">p2-Omnis ad magni, minima nulla at esse exercitationem praesentium quia culpa hic aperiam, ipsam
+        consequatur nihil
+        incidunt fugit eligendi iste alias! Numquam ipsam quo deserunt atque tempora itaque iure expedita!</p>
+    <ul class="liste">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Rerum quaerat odio recusandae voluptas?</li>
+        <li>Nam ratione ducimus quidem suscipit?</li>
+        <li>Perferendis rerum rem corporis quas.</li>
+        <li>Sed ratione accusantium porro rerum?</li>
+    </ul>
+    <ul>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Eaque ipsum assumenda quae.</li>
+        <li>Vitae consequatur eaque culpa?</li>
+    </ul>
+    <script>
+        // $("p").hide();
+        //   $("#p1").hide;
+        //   $(".p2").hide();
+        // $(".liste li").hide();//class idsi liste olan ul içerisindeki li leri saklamaktadır.
+        // $("ul li:first").hide();//ilk bulunan ul içerisindeki ilk li saklanır.
+        $("ul li:first-child").hide();//tüm ul içerisindeki ilk li ler saklanmaktadır.
+    </script>
+</body>
+
+</html>
